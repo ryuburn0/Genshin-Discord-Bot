@@ -1,7 +1,7 @@
 # 原神 Discord Bot
 本分支使用 discord.py v1.7.3，為舊版 API
 
-目前已將機器人開發轉換至 discord.py v2.0，請參考 [v2.0 分支](https://github.com/KT-Yeh/Genshin-Discord-Bot/tree/discord.py_v2.0)
+目前已將機器人開發轉換至 discord.py v2.0 先行版，請參考 [v2.0 分支](https://github.com/KT-Yeh/Genshin-Discord-Bot/tree/discord.py_v2.0)
 
 等到 discord.py v2.0 正式版發佈後，屆時會將分支合併回來 master
 
@@ -51,10 +51,30 @@
 ![](https://i.imgur.com/BfzjewI.png)
 
 
-### 本地端
+### 本地端（docker 或一般方式二選一）
+#### docker方式（推薦，不用自己裝 python 跟套件環境）
+1. 下載並安裝 [docker](https://www.docker.com/get-started/)
+2. 下載 [本專案](https://github.com/KT-Yeh/Genshin-Discord-Bot/archive/refs/heads/master.zip)
+3. 在專案資料夾（Genshin-Discord-Bot）內，用文字編輯器開啟 `.env(example)` 檔案，把剛才取得的 Token 貼在 `BOT_TOKEN=` 欄位後面，並將檔案另存為 `.env`
+4. 在專案資料夾內開啟 cmd 或 powershell，輸入底下 docker-compose 命令
+    ```python
+    # 在前台運行(關閉終端機=關閉bot)
+    docker-compose up
+    
+    # 在後台運行(關閉docker=關閉bot,可以關閉終端機)
+    docker-compose up -d
+    
+    # 查看bot的輸出
+    docker-compose logs -f
+    
+    # 關閉bot
+    docker-compose down
+    ```
+
+#### 一般方式
 1. 下載 [本專案](https://github.com/KT-Yeh/Genshin-Discord-Bot/archive/refs/heads/master.zip)
 2. 下載並安裝 Python（版本 3.8 以上）: https://www.python.org/downloads/
-3. 在專案資料夾（Genshin-Discord-Bot）內，用文字編輯器開啟 `.env(example)` 檔案，把剛才取得的 Token 貼在 `BOT_TOKEN = ` 欄位後面，並將檔案另存為 `.env`
+3. 在專案資料夾（Genshin-Discord-Bot）內，用文字編輯器開啟 `.env(example)` 檔案，把剛才取得的 Token 貼在 `BOT_TOKEN=` 欄位後面，並將檔案另存為 `.env`
 4. 在專案資料夾內開啟 cmd 或 powershell，輸入底下命令安裝相關套件：
 ```
 pip3 install -r requirements.txt
@@ -63,22 +83,6 @@ pip3 install -r requirements.txt
 ```
 python .\main.py
 ```
-
-### docker方式
-1. 安裝docker
-2. 下載 [本專案](https://github.com/KT-Yeh/Genshin-Discord-Bot/archive/refs/heads/master.zip) 並解壓
-3. 設定好你的`.env`檔案(同"本地端"使用方法步驟3)
-4. 在專案資料夾內使用terminal輸入docker-compose指令運行
-    ```
-    # 在前台運行(關閉terminal=關閉bot)
-    docker-compose up
-    # 在後台運行(關閉docker=關閉bot,可以關閉terminal)
-    docker-compose up -d
-    # 查看bot的輸出
-    docker-compose logs -f
-    # 關閉bot
-    docker-compose down
-    ```
 
 
 ## 配置檔案說明 (.env)
