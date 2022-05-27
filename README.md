@@ -21,9 +21,9 @@
 ![](https://i.imgur.com/bNY19NW.png)
 
 ## 公共機器人
-![](https://i.imgur.com/ULhx0EP.png)
+[![](https://i.imgur.com/ULhx0EP.png)](https://bit.ly/原神小幫手邀請)
 
-#### 邀請連結：https://bit.ly/原神小幫手Bot
+#### 邀請連結：https://bit.ly/原神小幫手邀請
 - 多人伺服器要請有管理權限的人員邀請機器人
 - 個人使用可以建立一個只有自己的 Discord 伺服器，然後邀請機器人
 
