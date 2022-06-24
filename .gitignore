@@ -10,5 +10,5 @@ data/*.json
 data/*.log
 data/image/character/[0-9]*.png
 
-# VS Code
+# VS Code 
 .vscode
